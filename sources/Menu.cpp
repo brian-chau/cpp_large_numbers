@@ -19,9 +19,9 @@ int Menu::HandleMenu() {
     clear();
     noecho();
     cbreak(); /* Line buffering disabled. pass on everything */
-    unsigned int startx(10), starty(0);
+    unsigned int startx(10), starty(1);
 
-    m_MenuWin = newwin(HEIGHT, WIDTH, startx, starty);
+    m_MenuWin = newwin(HEIGHT, WIDTH, starty, startx);
     keypad(m_MenuWin, TRUE);
     mvprintw(0, 0, "Use arrow keys to go up and down, Press enter to select a choice");
     refresh();
