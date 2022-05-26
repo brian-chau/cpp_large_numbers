@@ -2,8 +2,8 @@
 
 #include <stdio.h>
 
-#define WIDTH 30
-#define HEIGHT 10
+#define WIDTH 120
+#define HEIGHT 24
 Menu::Menu(std::vector<std::string> choices)
     : m_Choices(choices), m_nChoices(choices.size()), m_MenuWin(NULL), m_Highlight(1) {
 }
@@ -11,7 +11,7 @@ Menu::Menu(std::vector<std::string> choices)
 Menu::~Menu() {
 }
 
-std::string Menu::HandleMenu() {
+int Menu::HandleMenu() {
     int choice(0);
     int c;
 
@@ -19,10 +19,9 @@ std::string Menu::HandleMenu() {
     clear();
     noecho();
     cbreak(); /* Line buffering disabled. pass on everything */
-    unsigned int startx = (80 - WIDTH) / 2;
-    unsigned int starty = (24 - HEIGHT) / 2;
+    unsigned int startx(10), starty(0);
 
-    m_MenuWin = newwin(HEIGHT, WIDTH, starty, startx);
+    m_MenuWin = newwin(HEIGHT, WIDTH, startx, starty);
     keypad(m_MenuWin, TRUE);
     mvprintw(0, 0, "Use arrow keys to go up and down, Press enter to select a choice");
     refresh();
@@ -61,7 +60,8 @@ std::string Menu::HandleMenu() {
     refresh();
     endwin();
 
-    return m_Choices[choice - 1];
+    return choice - 1;
+    // return m_Choices[choice - 1];
 }
 
 void Menu::PrintMenu() {

@@ -7,7 +7,7 @@ class Menu {
    public:
     Menu(std::vector<std::string> choices);
     ~Menu();
-    std::string HandleMenu();
+    int HandleMenu();
     void PrintMenu();
 
    private:

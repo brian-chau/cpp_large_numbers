@@ -1,17 +1,28 @@
 #include <iostream>
 #include <memory>
 
+#include "Fibonacci.h"
 #include "Menu.h"
 
 int main() {
-    std::vector<std::string> choices{"Choice 1",
-                                     "Choice 2",
-                                     "Choice 3",
-                                     "Choice 4",
+    std::vector<std::string> choices{"Fibonacci with Algorithm",
+                                     "Fibonacci using GMP built-in function",
                                      "Exit"};
 
     std::unique_ptr<Menu> menu(new Menu(choices));
-    std::string result = menu->HandleMenu();
-    std::cout << "You chose: " << result << std::endl;
+    int choice = menu->HandleMenu();
+    switch (choice) {
+        case 0: {
+            std::unique_ptr<Fibonacci> fib(new Fibonacci());
+            std::cout << fib->FibAlgorithm(30000000) << std::endl;
+        } break;
+        case 1: {
+            std::unique_ptr<Fibonacci> fib(new Fibonacci());
+            fib->FibBuiltIn(30000000);
+        } break;
+        default:
+            std::cout << "Invalid selection!" << std::endl;
+            break;
+    }
     return 0;
 }
