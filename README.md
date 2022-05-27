@@ -6,21 +6,21 @@ This is an example of how to use:
 
 ## Setting up WSL2
 1. Install WSL
-    a. Start "Command Prompt"
-    b. Run "wsl --set-default-version 2"
-    b. Run "wsl --list --online" to see available distributions
-    c. Run "wsl --install -d <distro_name>" based on what you see in the list.
+    1. Start "Command Prompt"
+    2. Run "wsl --set-default-version 2"
+    3. Run "wsl --list --online" to see available distributions
+    4. Run "wsl --install -d <distro_name>" based on what you see in the list.
         * This will take several minutes
 
 2. Start WSL
-    a. Press Ctrl+R
-    b. Type "wsl"
-    c. Press Enter
+    1. Press Ctrl+R
+    2. Type "wsl"
+    3. Press Enter
 
 3. Fix the command line path name.
     a. Edit the ~/.bashrc file.
-        a. At the top of the file, paste the following code snippet, where <current_directory> is the name of the 
-           mount point shown in the console window (e.g. "/mnt/c/Users/<username>")
+        * At the top of the file, paste the following code snippet, where <current_directory> is the name of the 
+          mount point shown in the console window (e.g. "/mnt/c/Users/<username>")
 
             if [[ $PWD == /mnt/c/Users/<username> ]]; then
               cd /home/user/user
@@ -55,7 +55,6 @@ This is an example of how to use:
         c3. Delete any old SSH keys if any.
         c4. Start creating SSH keys
             c4a: Run the following commands:
-
                 ssh-keygen -t ed25519 -C "your_email@example.com"
                 eval "$(ssh-agent -s)"
                 ssh-add ~/.ssh/id_ed25519
