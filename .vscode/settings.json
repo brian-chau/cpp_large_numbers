@@ -4,6 +4,11 @@
             "cwd": "/home/user/repos/cpp_practice",
             "binaryPath": "/home/user/repos/cpp_practice/practice",
             "binaryArgs": []
+        },
+        {
+            "cwd": "/home/user/repos/cpp_large_numbers",
+            "binaryPath": "/home/user/repos/cpp_large_numbers/practice",
+            "binaryArgs": []
         }
     ]
 }

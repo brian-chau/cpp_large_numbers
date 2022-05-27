@@ -5,18 +5,18 @@
 # 'make clean all'   removes all .o files and executable file
 
 # define the C++ compiler to use
-CC := g++-11
+CC := g++
 RM := rm -rf
 
 # define any compile-time flags
-CFLAGS := -Wall -Werror -g -std=c++20 #-fPIC # Uncomment -fPIC for a shared object
+CFLAGS := -Wall -Werror -g -std=c++17 #-fPIC # Uncomment -fPIC for a shared object
 
 # define any directories containing header files other than /usr/include
 #
 INC := ./headers ./sources
 INCLUDES := $(foreach d, $(INC), -I$d)
 
-LFLAGS := -L./libs
+LFLAGS := -L./libs -L/usr/local/lib
 
 # This should generate a shared object
 # TODO: If you want to create a normal binary file, remove this '-shared' flag

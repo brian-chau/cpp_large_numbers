@@ -3,7 +3,7 @@
         "myDefaultIncludePath": [
             "headers"
         ],
-        "myCompilerPath": "/usr/bin/gcc-11"
+        "myCompilerPath": "/usr/bin/gcc"
     },
     "configurations": [
         {
@@ -20,8 +20,7 @@
                 ],
                 "limitSymbolsToIncludedHeaders": true,
                 "databaseFilename": ""
-            },
-            "configurationProvider": "ms-vscode.makefile-tools"
+            }
         }
     ],
     "version": 4
