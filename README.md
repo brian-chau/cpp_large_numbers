@@ -49,6 +49,7 @@ This is an example of how to use:
     ```
     alias cls="printf '\ec'; history -c"
     alias nanos="nano -ET4"
+    alias ii="explorer.exe"
     ```
 
 6. Add GitHub settings
@@ -86,7 +87,7 @@ This is an example of how to use:
         ```
 2. Setup the project
     1. Navigate to the project with `cd cpp_large_numbers`
-    2. Run this command to install the necessary libraries: sudo apt install make build-essential lzip m4 libncurses5-dev
+    2. Run this command to install the necessary libraries: `sudo apt install make build-essential lzip m4 libncurses5-dev`
     3. Install "gmp":
         1. Download GMP from here: https://gmplib.org/
         2. Unpack it with the command: `sudo tar --lzip -xvf gmp-x.y.z.tar.lz`
