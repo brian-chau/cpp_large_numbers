@@ -7,14 +7,14 @@ This is an example of how to use:
 ## Setting up WSL2
 1. Install WSL
     1. Start "Command Prompt"
-    2. Run "wsl --set-default-version 2"
-    3. Run "wsl --list --online" to see available distributions
-    4. Run "wsl --install -d <distro_name>" based on what you see in the list.
+    2. Run `wsl --set-default-version 2`
+    3. Run `wsl --list --online` to see available distributions
+    4. Run `wsl --install -d <distro_name>` based on what you see in the list.
         * This will take several minutes
 
 2. Start WSL
     1. Press Ctrl+R
-    2. Type "wsl"
+    2. Type `wsl`
     3. Press Enter
 
 3. Fix the command line path name.
@@ -38,14 +38,17 @@ This is an example of how to use:
         * Do the same for the "else" block.
 
 4. Update the system
-    1. sudo apt update
-    2. sudo apt upgrade
-    3. sudo apt autoremove
+    ```
+    sudo apt update
+    sudo apt upgrade
+    sudo apt autoremove
+    ```
 
 5. Add custom aliases to ~/.bash_aliases
-    1. alias cls="printf '\ec'; history -c"
-    2. alias nanos="nano -ET4"
-
+    ```
+    alias cls="printf '\ec'; history -c"
+    alias nanos="nano -ET4"
+    ```
 6. Add GitHub settings
     1. Restart WSL
     2. Run "mkdir repos"
@@ -63,40 +66,41 @@ This is an example of how to use:
                 ```
             2. Copy the result and go to this page: https://github.com/settings/ssh/new
             3. For "Title," put "Linux".
-            4. For "Key," paste the result of (c4b)
+            4. For "Key," paste the copied key.
             5. Click "Add SSH Key"
-            6. Run "ssh -T git@github.com", then type "yes"
+            6. Run `ssh -T git@github.com`, then type "yes"
 
 ## Setting up the dependencies for this project
 1. Download the project source code:
     1. Open WSL.
         1. Ctrl+R
-        2. Type "wsl"
+        2. Type `wsl`
         3. Press Enter
 
     2. Run these commands:
-        1. cd repos
-        2. git clone git@github.com:brian-chau/cpp_large_numbers.git
-
+        ```
+        cd repos
+        git clone git@github.com:brian-chau/cpp_large_numbers.git
+        ```
 2. Setup the project
-    1. Navigate to the project with "cd cpp_large_numbers"
+    1. Navigate to the project with `cd cpp_large_numbers`
     2. Run this command to install the necessary libraries: sudo apt install make build-essential lzip m4 libncurses5-dev
     3. Install "gmp":
         1. Download GMP from here: https://gmplib.org/
-        2. Unpack it with the command: sudo tar --lzip -xvf gmp-x.y.z.tar.lz
-        3. Navigate into that folder: cd gmp-x.y.z
+        2. Unpack it with the command: `sudo tar --lzip -xvf gmp-x.y.z.tar.lz`
+        3. Navigate into that folder: `cd gmp-x.y.z`
         4. Run the following commands:
-```
-sudo ./configure --enable-cxx
-sudo make
-sudo make check
-sudo make install
-```
-    4. Run: make
-    5. Run: sudo ldconfig
+            ```
+            sudo ./configure --enable-cxx
+            sudo make
+            sudo make check
+            sudo make install
+            ```
+    4. Run: `make`
+    5. Run: `sudo ldconfig`
 
 ## Setting up VSCode
-1. In WSL, type "code ."
+1. In WSL, type `code .`
 2. Press Ctrl+Shift+X to open the "Extensions" window.
 3. Install the following extensions
     1. C/C++ Themes
@@ -105,7 +109,7 @@ sudo make install
     4. Remote - WSL
     5. Better C++ Syntax
 4. Close VSCode
-5. Type "code ." in the terminal to restart it.
+5. Type `code .` in the terminal to restart it.
 6. Press Ctrl+Shift+X again to open the "Extensions" window.
 7. If any of the above extensions say "Install in WSL: Ubuntu-20.04", then click that button.
 8. Configure editor settings
