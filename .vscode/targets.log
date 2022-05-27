@@ -1,4 +1,6 @@
 make all --print-data-base --no-builtin-variables --no-builtin-rules --question
+make: *** No rule to make target 'sources/LargeNumber.o', needed by 'practice'.  Stop.
+
 # GNU Make 4.2.1
 # Built for x86_64-pc-linux-gnu
 # Copyright (C) 1988-2016 Free Software Foundation, Inc.
@@ -6,7 +8,7 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Thu May 26 19:09:43 2022
+# Make data base, printed on Thu May 26 20:04:32 2022
 
 # Variables
 
@@ -15,7 +17,7 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # automatic
 ?F = $(notdir $?)
 # environment
-WSLENV = VSCODE_WSL_EXT_LOCATION/up:VSCODE_SERVER_TAR/up:VSCODE_CLI_REMOTE_ENV/w:ELECTRON_RUN_AS_NODE/w:
+WSLENV = ELECTRON_RUN_AS_NODE/w:WT_SESSION::WT_PROFILE_ID
 # default
 .SHELLFLAGS := -c
 # environment
@@ -37,8 +39,7 @@ RM := rm -rf
 # environment
 VSCODE_NLS_CONFIG = {"locale":"en","availableLanguages":{}}
 # environment
-_ = /home/user/.vscode-server/bin/c3511e6c69bb39013c4a4b7b9566ec1ca73fc4d5/node
- 
+_ = /mnt/c/Users/brian/AppData/Local/Programs/Microsoft VS Code/bin/code
 # makefile (from 'Makefile', line 12)
 CFLAGS := -Wall -Werror -g -std=c++17 
 # makefile (from 'Makefile', line 1)
@@ -58,17 +59,15 @@ VSCODE_CWD = /mnt/c/Users/brian/AppData/Local/Programs/Microsoft VS Code
 # default
 MAKE_HOST := x86_64-pc-linux-gnu
 # environment
-PATH = /home/user/.vscode-server/bin/c3511e6c69bb39013c4a4b7b9566ec1ca73fc4d5/bin/remote-cli:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Program Files/Common Files/Oracle/Java/javapath:/mnt/c/Windows/system32:/mnt/c/Windows:/mnt/c/Windows/System32/Wbem:/mnt/c/Windows/System32/WindowsPowerShell/v1.0/:/mnt/c/Windows/System32/OpenSSH/:/mnt/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common:/mnt/c/Program Files/NVIDIA Corporation/NVIDIA NvDLISR:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/Program Files/Git/cmd:/mnt/c/Program Files/Git/mingw64/bin:/mnt/c/Program Files/Git/usr/bin:/mnt/c/Users/brian/AppData/Local/Microsoft/WindowsApps:/mnt/c/Program Files (x86)/Notepad++:/mnt/c/Users/brian/AppData/Local/Programs/MiKTeX/miktex/bin/x64/:/mnt/c/GNAT/2021/bin:/mnt/c/Program Files/Oracle/VirtualBox:/mnt/c/scripts:/mnt/c/platform-tools:/mnt/c/Program Files/Git:/mnt/c/Program Files/Git/cmd:/mnt/c/Program Files/Git/bin:/mnt/c/Users/brian/AppData/Local/Programs/Microsoft VS Code/bin:/snap/bin
+PATH = /home/user/.vscode-server/bin/c3511e6c69bb39013c4a4b7b9566ec1ca73fc4d5/bin/remote-cli:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Program Files/Common Files/Oracle/Java/javapath:/mnt/c/Windows/system32:/mnt/c/Windows:/mnt/c/Windows/System32/Wbem:/mnt/c/Windows/System32/WindowsPowerShell/v1.0/:/mnt/c/Windows/System32/OpenSSH/:/mnt/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common:/mnt/c/Program Files/NVIDIA Corporation/NVIDIA NvDLISR:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/Program Files/Git/cmd:/mnt/c/Program Files/Git/mingw64/bin:/mnt/c/Program Files/Git/usr/bin:/mnt/c/Users/brian/AppData/Local/Microsoft/WindowsApps:/mnt/c/Program Files (x86)/Notepad++:/mnt/c/Users/brian/AppData/Local/Programs/MiKTeX/miktex/bin/x64/:/mnt/c/GNAT/2021/bin:/mnt/c/Program Files/Oracle/VirtualBox:/mnt/c/scripts:/mnt/c/platform-tools:/mnt/c/Program Files/Git:/mnt/c/Program Files/Git/bin:/mnt/c/Users/brian/AppData/Local/Programs/Microsoft VS Code/bin:/snap/bin
 # environment
 XDG_RUNTIME_DIR = /mnt/wslg/runtime-dir
 # environment
 VSCODE_LOG_STACK = false
 # environment
-VSCODE_IPC_HOOK_CLI = /mnt/wslg/runtime-dir/vscode-ipc-df76d225-57a5-43ab-b477-b334eca8e79d.sock
+VSCODE_IPC_HOOK_CLI = /mnt/wslg/runtime-dir/vscode-ipc-cac69220-4061-42dc-8d0e-0734605def1d.sock
 # makefile (from 'Makefile', line 23)
 LDFLAGS := 
-# environment
-VSCODE_SERVER_TAR = /mnt/c/Users/brian/AppData/Local/Temp/vscode-remote-wsl/c3511e6c69bb39013c4a4b7b9566ec1ca73fc4d5/vscode-server-stable-linux-x64.tar.gz
 # default
 .FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell archives jobserver output-sync check-symlink load
 # environment
@@ -84,9 +83,11 @@ PWD = /home/user/repos/cpp_large_numbers
 # default
 .LOADED := 
 # environment
-WSL_INTEROP = /run/WSL/1274_interop
+WSL_INTEROP = /run/WSL/4179_interop
 # environment
 PULSE_SERVER = /mnt/wslg/PulseServer
+# environment
+WT_SESSION = ce12af25-5758-494b-892b-baf6c45cbae7
 # environment
 VSCODE_AMD_ENTRYPOINT = vs/workbench/api/node/extensionHostProcess
 # environment
@@ -110,7 +111,7 @@ MAKECMDGOALS := all
 # makefile (from 'Makefile', line 28)
 SRCS := sources/LargeNumber.cpp sources/Fibonacci.cpp sources/Menu.cpp sources/main.cpp
 # environment
-SHLVL = 0
+SHLVL = 1
 # makefile (from 'Makefile', line 8)
 CC := g++
 # default
@@ -120,7 +121,7 @@ USER = user
 # makefile
 .DEFAULT_GOAL := all
 # environment
-NAME = bpc
+NAME = Code
 # automatic
 %D = $(patsubst %/,%,$(dir $%))
 # makefile (from 'Makefile', line 19)
@@ -149,6 +150,8 @@ MAIN := practice
 +F = $(notdir $+)
 # environment
 VSCODE_HANDLES_SIGPIPE = true
+# environment
+WT_PROFILE_ID = {07b52e3e-de2c-5db4-bd2d-ba144ed6c273}
 # default
 MAKEFILES := 
 # automatic
@@ -178,7 +181,7 @@ VSCODE_EXTHOST_WILL_SEND_SOCKET = true
 # environment
 WSL_DISTRO_NAME = Ubuntu-20.04
 # variable set hash-table stats:
-# Load=83/1024=8%, Rehash=0, Collisions=6/118=5%
+# Load=84/1024=8%, Rehash=0, Collisions=6/115=5%
 
 # Pattern-specific Variable Values
 
@@ -186,10 +189,10 @@ WSL_DISTRO_NAME = Ubuntu-20.04
 
 # Directories
 
-# . (device 2080, inode 652): 10 files, no impossibilities.
-# sources (device 2080, inode 7137): 10 files, no impossibilities.
+# . (device 2080, inode 652): 9 files, no impossibilities.
+# sources (device 2080, inode 7137): 6 files, no impossibilities.
 
-# 20 files, no impossibilities in 2 directories.
+# 15 files, no impossibilities in 2 directories.
 
 # Implicit Rules
 
@@ -206,37 +209,16 @@ sources/main.cpp:
 all: practice
 #  Command line target.
 #  Implicit rule search has not been done.
-#  Implicit/static pattern stem: ''
 #  File does not exist.
-#  File has been updated.
-#  Needs to be updated (-q is set).
-# automatic
-# @ := all
-# automatic
-# % := 
-# automatic
-# * := 
-# automatic
-# + := practice
-# automatic
-# | := 
-# automatic
-# < := practice
-# automatic
-# ^ := practice
-# automatic
-# ? := practice
-# variable set hash-table stats:
-# Load=8/32=25%, Rehash=0, Collisions=1/12=8%
+#  File has not been updated.
 #  recipe to execute (from 'Makefile', line 38):
 	@echo  '$(MAIN)' has been compiled
 
 # Not a target:
 sources/LargeNumber.o:
 #  Implicit rule search has been done.
-#  Last modified 2022-05-26 19:09:36.611277339
-#  File has been updated.
-#  Successfully updated.
+#  File does not exist.
+#  File has not been updated.
 
 .PHONY: depend clean clean_all
 #  Implicit rule search has not been done.
@@ -250,12 +232,6 @@ sources/Menu.cpp:
 #  File has not been updated.
 
 # Not a target:
-.SUFFIXES:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
-
-# Not a target:
 Makefile:
 #  Implicit rule search has been done.
 #  Last modified 2022-05-26 19:04:06.45127547
@@ -264,17 +240,15 @@ Makefile:
 
 # Not a target:
 sources/Fibonacci.o:
-#  Implicit rule search has been done.
-#  Last modified 2022-05-26 19:09:37.081277342
-#  File has been updated.
-#  Successfully updated.
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
 # Not a target:
 sources/main.o:
-#  Implicit rule search has been done.
-#  Last modified 2022-05-26 19:09:37.861277346
-#  File has been updated.
-#  Successfully updated.
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
 depend: sources/LargeNumber.cpp sources/Fibonacci.cpp sources/Menu.cpp sources/main.cpp
 #  Phony target (prerequisite of .PHONY).
@@ -292,10 +266,9 @@ depend: sources/LargeNumber.cpp sources/Fibonacci.cpp sources/Menu.cpp sources/m
 
 # Not a target:
 sources/Menu.o:
-#  Implicit rule search has been done.
-#  Last modified 2022-05-26 19:09:37.311277343
-#  File has been updated.
-#  Successfully updated.
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
 .cpp.o:
 #  Implicit rule search has not been done.
@@ -307,6 +280,7 @@ sources/Menu.o:
 clean:
 #  Phony target (prerequisite of .PHONY).
 #  Implicit rule search has not been done.
+ 
 #  File does not exist.
 #  File has not been updated.
 #  recipe to execute (from 'Makefile', line 50):
@@ -325,7 +299,6 @@ clean_all:
 #  File does not exist.
 #  File has not been updated.
 #  recipe to execute (from 'Makefile', line 54):
- 
 	$(RM) sources/*.o *~ $(MAIN)
 	$(RM) $(MAIN).dSYM
 
@@ -337,9 +310,8 @@ sources/Fibonacci.cpp:
 
 practice: sources/LargeNumber.o sources/Fibonacci.o sources/Menu.o sources/main.o
 #  Implicit rule search has not been done.
-#  Last modified 2022-05-26 19:09:38.001277347
-#  File has been updated.
-#  Successfully updated.
+#  File does not exist.
+#  File has not been updated.
 #  recipe to execute (from 'Makefile', line 41):
 	# TODO: If you want to create a normal binary file, use this
 	$(CC) $(CFLAGS) $(INCLUDES) -o $(MAIN) $(OBJS) $(LFLAGS) $(LIBS)
@@ -347,19 +319,19 @@ practice: sources/LargeNumber.o sources/Fibonacci.o sources/Menu.o sources/main.
 	# $(CC) $(CFLAGS) $(LDFLAGS) $(LIBS) -o $@ $^
 
 # files hash-table stats:
-# Load=18/1024=2%, Rehash=0, Collisions=0/46=0%
+# Load=18/1024=2%, Rehash=0, Collisions=0/45=0%
 # VPATH Search Paths
 
 # No 'vpath' search paths.
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 36 / storage = 399 B / avg = 11 B
-# current buf: size = 8162 B / used = 399 B / count = 36 / avg = 11 B
+# strcache buffers: 1 (0) / strings = 32 / storage = 359 B / avg = 11 B
+# current buf: size = 8162 B / used = 359 B / count = 32 / avg = 11 B
 
-# strcache performance: lookups = 57 / hit rate = 36%
+# strcache performance: lookups = 51 / hit rate = 37%
 # hash-table stats:
-# Load=36/8192=0%, Rehash=0, Collisions=2/57=4%
-# Finished Make data base on Thu May 26 19:09:43 2022
+# Load=32/8192=0%, Rehash=0, Collisions=2/51=4%
+# Finished Make data base on Thu May 26 20:04:32 2022
 
  

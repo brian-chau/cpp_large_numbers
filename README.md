@@ -103,7 +103,7 @@ This is an example of how to use:
     5. Run: `sudo ldconfig`
 
 ## Setting up VSCode
-1. In WSL, type `code .`
+1. Right-click on the project folder, select `Open in Terminal` to open the application in WSL2, then type `code .`
 2. Press Ctrl+Shift+X to open the "Extensions" window.
 3. Install the following extensions
     1. C/C++ Themes
@@ -132,3 +132,5 @@ This is an example of how to use:
         2. Press Enter to save the keybinding.
     3. In the keybindings search box, type "Makefile: Build clean the current target"
         1. Double-click the keybinding and replace it with Ctrl+Shift+Z.
+
+## To use
