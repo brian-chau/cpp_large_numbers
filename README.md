@@ -55,10 +55,12 @@ This is an example of how to use:
         3. Delete any old SSH keys if any.
         4. Start creating SSH keys
             1: Run the following commands:
+                ```
                 ssh-keygen -t ed25519 -C "your_email@example.com"
                 eval "$(ssh-agent -s)"
                 ssh-add ~/.ssh/id_ed25519
                 cat ~/.ssh/id_ed25519.pub
+                ```
             2: Copy the result and go to this page: https://github.com/settings/ssh/new
             3: For "Title," put "Linux".
             4: For "Key," paste the result of (c4b)
