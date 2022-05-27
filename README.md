@@ -19,7 +19,7 @@ This is an example of how to use:
     3. Press Enter
 
 3. Fix the command line path name.
-    1. Edit the ~/.bashrc file.
+    1. Edit the `~/.bashrc` file.
         * At the top of the file, paste the following code snippet, where <current_directory> is the name of the 
           mount point shown in the console window (e.g. "/mnt/c/Users/`username`")
             ```
@@ -37,6 +37,9 @@ This is an example of how to use:
     2. Look for the line that says `if [ "$color_prompt" = yes ]; then`
         * In the following line, remove the part that specifies the username "\u" and the host name "\h"
         * Do the same for the "else" block.
+    3. Save and exit.
+    4. In the terminal, type `cd /home/user`.
+    5. Then type `ln -s /mnt/c/Users/brian ~/user/user`
 
 4. Update the system
     ```
