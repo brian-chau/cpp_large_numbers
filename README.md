@@ -21,18 +21,18 @@ This is an example of how to use:
     1. Edit the ~/.bashrc file.
         * At the top of the file, paste the following code snippet, where <current_directory> is the name of the 
           mount point shown in the console window (e.g. "/mnt/c/Users/<username>")
-```
-if [[ $PWD == /mnt/c/Users/<username> ]]; then
-  cd /home/user/user
-else
-  case $PWD/ in
-    /mnt/c/Users/<username>/*)
-      without_prefix=${PWD#/mnt/c/Users/<username>/}
-      cd /home/user/user/$without_prefix
-      ;;
-  esac
-fi
-```
+            ```
+            if [[ $PWD == /mnt/c/Users/<username> ]]; then
+              cd /home/user/user
+            else
+              case $PWD/ in
+                /mnt/c/Users/<username>/*)
+                  without_prefix=${PWD#/mnt/c/Users/<username>/}
+                  cd /home/user/user/$without_prefix
+                  ;;
+              esac
+            fi
+            ```
     2. Look for the line that says "if [ "$color_prompt" = yes ]; then"
         * In the following line, remove the part that specifies the username "\u" and the host name "\h"
         * Do the same for the "else" block.
