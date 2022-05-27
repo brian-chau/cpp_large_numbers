@@ -3,6 +3,7 @@
 This is an example of how to use:
 * Visual Studio Code with a C++ application written for GCC compiler
 * ncurses to display a menu and select an option
+* GMP for large numbers
 
 ## Setting up WSL2
 1. Install WSL
