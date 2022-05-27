@@ -33,7 +33,7 @@ This is an example of how to use:
               esac
             fi
             ```
-    2. Look for the line that says "if [ "$color_prompt" = yes ]; then"
+    2. Look for the line that says `if [ "$color_prompt" = yes ]; then`
         * In the following line, remove the part that specifies the username "\u" and the host name "\h"
         * Do the same for the "else" block.
 
@@ -49,9 +49,10 @@ This is an example of how to use:
     alias cls="printf '\ec'; history -c"
     alias nanos="nano -ET4"
     ```
+
 6. Add GitHub settings
     1. Restart WSL
-    2. Run "mkdir repos"
+    2. Run `mkdir repos`
     3. Connect to GitHub
         1. Sign in to GitHub
         2. Click profile picture in upper right corner, then click Settings
