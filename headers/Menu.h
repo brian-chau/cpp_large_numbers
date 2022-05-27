@@ -1,18 +1,17 @@
 #include <ncurses.h>
-
 #include <string>
 #include <vector>
 
 class Menu {
-   public:
-    Menu(std::vector<std::string> choices);
-    ~Menu();
-    int HandleMenu();
-    void PrintMenu();
+public:
+                             Menu(std::vector<std::string> choices);
+                            ~Menu();
+    int                      HandleMenu();
+    void                     PrintMenu();
 
-   private:
+private:
     std::vector<std::string> m_Choices;
-    unsigned int m_nChoices;
-    WINDOW *m_MenuWin;
-    unsigned int m_Highlight;
+    unsigned int             m_nChoices;
+    WINDOW                  *m_MenuWin;
+    unsigned int             m_Highlight;
 };

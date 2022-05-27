@@ -5,12 +5,15 @@
 #define WIDTH 120
 #define HEIGHT 24
 Menu::Menu(std::vector<std::string> choices)
-    : m_Choices(choices),
-      m_nChoices(choices.size()),
-      m_MenuWin(NULL),
-      m_Highlight(1) {}
+    : m_Choices(choices)
+    , m_nChoices(choices.size())
+    , m_MenuWin(NULL)
+    , m_Highlight(1) {
 
-Menu::~Menu() {}
+}
+
+Menu::~Menu() {
+}
 
 int Menu::HandleMenu() {
     int choice(0);
