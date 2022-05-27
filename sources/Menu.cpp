@@ -5,11 +5,12 @@
 #define WIDTH 120
 #define HEIGHT 24
 Menu::Menu(std::vector<std::string> choices)
-    : m_Choices(choices), m_nChoices(choices.size()), m_MenuWin(NULL), m_Highlight(1) {
-}
+    : m_Choices(choices),
+      m_nChoices(choices.size()),
+      m_MenuWin(NULL),
+      m_Highlight(1) {}
 
-Menu::~Menu() {
-}
+Menu::~Menu() {}
 
 int Menu::HandleMenu() {
     int choice(0);
@@ -23,7 +24,9 @@ int Menu::HandleMenu() {
 
     m_MenuWin = newwin(HEIGHT, WIDTH, starty, startx);
     keypad(m_MenuWin, TRUE);
-    mvprintw(0, 0, "Use arrow keys to go up and down, Press enter to select a choice");
+    mvprintw(
+        0, 0,
+        "Use arrow keys to go up and down, Press enter to select a choice");
     refresh();
     PrintMenu();
     while (1) {
@@ -47,7 +50,10 @@ int Menu::HandleMenu() {
                 choice = m_Highlight;
                 break;
             default:
-                printf("\nCharacter pressed is = %3d Hopefully it can be printed as '%c'\n", c, c);
+                printf(
+                    "\nCharacter pressed is = %3d Hopefully it can be printed "
+                    "as '%c'\n",
+                    c, c);
                 refresh();
                 break;
         }
