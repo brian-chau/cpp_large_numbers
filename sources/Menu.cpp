@@ -9,10 +9,11 @@ Menu::Menu(std::vector<std::string> choices)
     , m_nChoices(choices.size())
     , m_MenuWin(NULL)
     , m_Highlight(1) {
-
+    // Intentionally left blank
 }
 
 Menu::~Menu() {
+    // Intentionally left blank
 }
 
 int Menu::HandleMenu() {

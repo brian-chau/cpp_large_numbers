@@ -114,6 +114,7 @@ This is an example of how to use:
     3. Makefile Tools
     4. Remote - WSL
     5. Better C++ Syntax
+    6. Clang Format by xaver
 4. Close VSCode
 5. Type `code .` in the terminal to restart it.
 6. Press Ctrl+Shift+X again to open the "Extensions" window.
@@ -135,5 +136,3 @@ This is an example of how to use:
         2. Press Enter to save the keybinding.
     3. In the keybindings search box, type "Makefile: Build clean the current target"
         1. Double-click the keybinding and replace it with Ctrl+Shift+Z.
-
-## To use

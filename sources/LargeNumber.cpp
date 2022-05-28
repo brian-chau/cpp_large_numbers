@@ -1,15 +1,18 @@
 #include "LargeNumber.h"
 
 #include <assert.h>
-#include <cstring>
-#include <iostream>
 #include <stdio.h>
 #include <stdlib.h>
 
+#include <cstring>
+#include <iostream>
+
 LargeNumber::LargeNumber() {
+    // Intentionally left blank
 }
 
 LargeNumber::~LargeNumber() {
+    // Intentionally left blank
 }
 
 char* LargeNumber::LongToBin(unsigned long long n) {

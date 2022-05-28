@@ -8,7 +8,7 @@ make: *** No rule to make target 'sources/LargeNumber.o', needed by 'practice'. 
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Thu May 26 20:04:32 2022
+# Make data base, printed on Sat May 28 13:32:22 2022
 
 # Variables
 
@@ -59,13 +59,13 @@ VSCODE_CWD = /mnt/c/Users/brian/AppData/Local/Programs/Microsoft VS Code
 # default
 MAKE_HOST := x86_64-pc-linux-gnu
 # environment
-PATH = /home/user/.vscode-server/bin/c3511e6c69bb39013c4a4b7b9566ec1ca73fc4d5/bin/remote-cli:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Program Files/Common Files/Oracle/Java/javapath:/mnt/c/Windows/system32:/mnt/c/Windows:/mnt/c/Windows/System32/Wbem:/mnt/c/Windows/System32/WindowsPowerShell/v1.0/:/mnt/c/Windows/System32/OpenSSH/:/mnt/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common:/mnt/c/Program Files/NVIDIA Corporation/NVIDIA NvDLISR:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/Program Files/Git/cmd:/mnt/c/Program Files/Git/mingw64/bin:/mnt/c/Program Files/Git/usr/bin:/mnt/c/Users/brian/AppData/Local/Microsoft/WindowsApps:/mnt/c/Program Files (x86)/Notepad++:/mnt/c/Users/brian/AppData/Local/Programs/MiKTeX/miktex/bin/x64/:/mnt/c/GNAT/2021/bin:/mnt/c/Program Files/Oracle/VirtualBox:/mnt/c/scripts:/mnt/c/platform-tools:/mnt/c/Program Files/Git:/mnt/c/Program Files/Git/bin:/mnt/c/Users/brian/AppData/Local/Programs/Microsoft VS Code/bin:/snap/bin
+PATH = /home/user/.vscode-server/bin/c3511e6c69bb39013c4a4b7b9566ec1ca73fc4d5/bin/remote-cli:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Program Files/Common Files/Oracle/Java/javapath:/mnt/c/Windows/system32:/mnt/c/Windows:/mnt/c/Windows/System32/Wbem:/mnt/c/Windows/System32/WindowsPowerShell/v1.0/:/mnt/c/Windows/System32/OpenSSH/:/mnt/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common:/mnt/c/Program Files/NVIDIA Corporation/NVIDIA NvDLISR:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/Program Files/Git/cmd:/mnt/c/Program Files/Git/mingw64/bin:/mnt/c/Program Files/Git/usr/bin:/mnt/c/Users/brian/AppData/Local/Microsoft/WindowsApps:/mnt/c/Program Files (x86)/Notepad++:/mnt/c/Users/brian/AppData/Local/Programs/MiKTeX/miktex/bin/x64/:/mnt/c/GNAT/2021/bin:/mnt/c/Program Files/Oracle/VirtualBox:/mnt/c/scripts:/mnt/c/platform-tools:/mnt/c/Program Files/Git:/mnt/c/Program Files/Git/bin:/mnt/c/Users/brian/AppData/Local/Programs/Microsoft VS Code/bin:/snap/bin:/usr/local/go/bin
 # environment
 XDG_RUNTIME_DIR = /mnt/wslg/runtime-dir
 # environment
 VSCODE_LOG_STACK = false
 # environment
-VSCODE_IPC_HOOK_CLI = /mnt/wslg/runtime-dir/vscode-ipc-cac69220-4061-42dc-8d0e-0734605def1d.sock
+VSCODE_IPC_HOOK_CLI = /mnt/wslg/runtime-dir/vscode-ipc-6cf04c43-f283-4494-85fa-d63b45a82341.sock
 # makefile (from 'Makefile', line 23)
 LDFLAGS := 
 # default
@@ -83,11 +83,11 @@ PWD = /home/user/repos/cpp_large_numbers
 # default
 .LOADED := 
 # environment
-WSL_INTEROP = /run/WSL/4179_interop
+WSL_INTEROP = /run/WSL/14745_interop
 # environment
 PULSE_SERVER = /mnt/wslg/PulseServer
 # environment
-WT_SESSION = ce12af25-5758-494b-892b-baf6c45cbae7
+WT_SESSION = d545aba9-a28e-4da4-9341-bc76f0de7323
 # environment
 VSCODE_AMD_ENTRYPOINT = vs/workbench/api/node/extensionHostProcess
 # environment
@@ -189,10 +189,10 @@ WSL_DISTRO_NAME = Ubuntu-20.04
 
 # Directories
 
-# . (device 2080, inode 652): 9 files, no impossibilities.
+# . (device 2080, inode 652): 11 files, no impossibilities.
 # sources (device 2080, inode 7137): 6 files, no impossibilities.
 
-# 15 files, no impossibilities in 2 directories.
+# 17 files, no impossibilities in 2 directories.
 
 # Implicit Rules
 
@@ -278,9 +278,9 @@ sources/Menu.o:
 	$(CC) $(CFLAGS) $(INCLUDES) -c $<  -o $@
 
 clean:
+ 
 #  Phony target (prerequisite of .PHONY).
 #  Implicit rule search has not been done.
- 
 #  File does not exist.
 #  File has not been updated.
 #  recipe to execute (from 'Makefile', line 50):
@@ -310,7 +310,7 @@ sources/Fibonacci.cpp:
 
 practice: sources/LargeNumber.o sources/Fibonacci.o sources/Menu.o sources/main.o
 #  Implicit rule search has not been done.
-#  File does not exist.
+#  Last modified 2022-05-26 22:53:12.331353285
 #  File has not been updated.
 #  recipe to execute (from 'Makefile', line 41):
 	# TODO: If you want to create a normal binary file, use this
@@ -326,12 +326,12 @@ practice: sources/LargeNumber.o sources/Fibonacci.o sources/Menu.o sources/main.
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 32 / storage = 359 B / avg = 11 B
-# current buf: size = 8162 B / used = 359 B / count = 32 / avg = 11 B
+# strcache buffers: 1 (0) / strings = 33 / storage = 373 B / avg = 11 B
+# current buf: size = 8162 B / used = 373 B / count = 33 / avg = 11 B
 
-# strcache performance: lookups = 51 / hit rate = 37%
+# strcache performance: lookups = 53 / hit rate = 37%
 # hash-table stats:
-# Load=32/8192=0%, Rehash=0, Collisions=2/51=4%
-# Finished Make data base on Thu May 26 20:04:32 2022
+# Load=33/8192=0%, Rehash=0, Collisions=2/53=4%
+# Finished Make data base on Sat May 28 13:32:22 2022
 
  

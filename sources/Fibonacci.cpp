@@ -3,9 +3,11 @@
 #include <iostream>
 
 Fibonacci::Fibonacci() {
+    // Intentionally left blank
 }
 
 Fibonacci::~Fibonacci() {
+    // Intentionally left blank
 }
 
 mpz_class Fibonacci::FibAlgorithm(unsigned long long n) {
