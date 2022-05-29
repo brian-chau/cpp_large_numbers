@@ -1,6 +1,0 @@
-make clean_all --dry-run --always-make --keep-going --print-directory
-make: Entering directory '/home/user/repos/cpp_large_numbers'
-rm -rf sources/*.o *~ practice
-rm -rf practice.dSYM
-make: Leaving directory '/home/user/repos/cpp_large_numbers'
- 
