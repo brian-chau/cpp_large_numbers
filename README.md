@@ -158,10 +158,11 @@ This is an example of how to use:
     5. Better C++ Syntax
     6. Clang Format by xaver
 5. Close VSCode
-6. Type `code .` in the terminal to restart it.
-7. Press Ctrl+Shift+X again to open the "Extensions" window.
-8. If any of the above extensions say "Install in WSL: Ubuntu-20.04", then click that button.
-9. Configure editor settings
+6. In the terminal, install `clang_format` with `sudo apt install clang-format`.
+7. Type `code .` in the terminal to restart it.
+8. Press Ctrl+Shift+X again to open the "Extensions" window.
+9. If any of the above extensions say "Install in WSL: Ubuntu-20.04", then click that button.
+10. Configure editor settings
     1. Click the gear icon in the lower left corner.
     2. Click Settings.
     3. In the search bar, type "minimap" and uncheck "Editor > Minimap: Enabled" where the checkbox says "Controls whether the minimap is shown"
@@ -170,7 +171,7 @@ This is an example of how to use:
     6. In the search bar, type "Format On Save" and check the box for "Editor: Format On Save"
     7. In the search box, type `C_Cpp.clang_format_fallbackStyle`
         1. In the field that appears, change `Visual Studio` to `{ BasedOnStyle: Google, IndentWidth: 4 }`
-10. Set the key bindings to build and clean the solution.
+11. Set the key bindings to build and clean the solution.
     1. Press Ctrl+K Ctrl+S
     2. In the keybindings search box, type "makefile: build clean the target ALL"
         1. Double-click the keybinding and replace it with Ctrl+Shift+B.
@@ -207,35 +208,3 @@ This is an example of how to use:
             ```
     4. Run: `make`
     5. Run: `sudo ldconfig`
-
-## Setting up VSCode
-1. Right-click on the project folder, select `Open in Terminal` to open the application in WSL2, then type `code .`
-2. Press Ctrl+Shift+X to open the "Extensions" window.
-3. Install the following extensions
-    1. C/C++ Themes
-    2. C/C++ Extension Pack
-    3. Makefile Tools
-    4. Remote - WSL
-    5. Better C++ Syntax
-    6. Clang Format by xaver
-4. Close VSCode
-5. Type `code .` in the terminal to restart it.
-6. Press Ctrl+Shift+X again to open the "Extensions" window.
-7. If any of the above extensions say "Install in WSL: Ubuntu-20.04", then click that button.
-8. Configure editor settings
-    1. Click the gear icon in the lower left corner.
-    2. Click Settings.
-    3. In the search bar, type "minimap" and uncheck "Editor > Minimap: Enabled" where the checkbox says "Controls whether the minimap is shown"
-    4. In the search bar, type "Trim Trailing Whitespace" and check the box for "Files: Trim Trailing Whitespace"
-    5. In the search bar, type "Detect Indentation" and uncheck the box for "Editor: Detect Indentation"
-    6. In the search bar, type "Format On Save" and check the box for "Editor: Format On Save"
-    7. In the search box, type `C_Cpp.clang_format_fallbackStyle`
-        1. In the field that appears, change `Visual Studio` to `{ BasedOnStyle: Google, IndentWidth: 4 }`
-9. Set the key bindings to build and clean the solution.
-    1. Press Ctrl+K Ctrl+S
-    2. In the keybindings search box, type "makefile: build clean the target ALL"
-        1. Double-click the keybinding and replace it with Ctrl+Shift+B.
-            * There is already a keybinding for that in VSCode, but you can remove the other keybinding to replace it with this.
-        2. Press Enter to save the keybinding.
-    3. In the keybindings search box, type "Makefile: Build clean the current target"
-        1. Double-click the keybinding and replace it with Ctrl+Shift+Z.
