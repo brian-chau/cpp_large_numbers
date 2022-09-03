@@ -3,13 +3,11 @@
 
 class LargeNumber {
 public:
-          LargeNumber();
-         ~LargeNumber();
+    LargeNumber();
+    ~LargeNumber();
 
     char* LongToBin(unsigned long long n);
 
 protected:
-
 private:
-
 };
