@@ -41,7 +41,7 @@ This is an example of how to use:
                     {
                         "guid": "{<some-ascii-hex-string-separated-by-underscores>}",
                         "hidden": false,
-                        "name": "Ubuntu-20.04",
+                        "name": "Ubuntu-22.04",
                         "source": "Windows.Terminal.Wsl"
                     },
                     ...
@@ -52,7 +52,7 @@ This is an example of how to use:
                 "default": {
                     "guid": "{<some-ascii-hex-string-separated-by-underscores>}",
                     "hidden": false,
-                    "name": "Ubuntu-20.04",
+                    "name": "Ubuntu-22.04",
                     "source": "Windows.Terminal.Wsl"
                 },
                 "list":
@@ -61,7 +61,7 @@ This is an example of how to use:
                     {
                         "guid": "{<some-ascii-hex-string-separated-by-underscores>}",
                         "hidden": false,
-                        "name": "Ubuntu-20.04",
+                        "name": "Ubuntu-22.04",
                         "source": "Windows.Terminal.Wsl"
                     },
                     ...
