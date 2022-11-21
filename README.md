@@ -1,4 +1,4 @@
-# C++ on WSL2 with VS Code
+# C++ on WSL2 with VS Code and CMake
 
 This is an example of how to use:
 * Install Ubuntu in WSL2
@@ -20,6 +20,15 @@ This is an example of how to use:
 2. Install Ubuntu 22
     1. In the Start menu, open the Microsoft Store, and search for Ubuntu 22.
     2. Select the item called "Ubuntu 22.04.1 LTS" and click "Install."
+    3. Click "Open" to launch the command prompt and start the installation process.
+        * If you encounter an error that says `There has been an error`, log out and log back in, and try again.
+        * If you encounter an error that says `Failed to attach disk 'C:\Users\....\ext4.vhdx' to WSL2: The system cannot find the file` then do the following:
+            1. Launch a new command prompt window by pressing `Ctrl+R`, then typing `cmd`
+            2. Type `wsl --list` to find the distribution that used to be installed.
+            3. Type `wslconfig /u <name of distribution that used to be installed>` to unlink the distribution.
+            4. Return to the Windows Store to try again.
+    4. When prompted for the initial account credentials, enter your Windows account username as your username, so that your Linux username will match your Windows username.
+    5. Enter a password, and confirm the password.
 
 3. Start WSL
     1. Press Ctrl+R
@@ -103,6 +112,26 @@ This is an example of how to use:
                 PS1='${debian_chroot:+($debian_chroot)}\w\$ '
             fi
             ```
+        * Also remove the `\u@\h` details from the title bar
+            ```
+            case "$TERM" in
+            xterm*|rxvt*)
+                PS1="\[\e]0;${debian_chroot:+($debian_chroot)}\u@\h: \w\a\]$PS1"
+                ;;
+            *)
+                ;;
+            esac
+            ```
+        * Change it to this:
+            ```
+            case "$TERM" in
+            xterm*|rxvt*)
+                PS1="\[\e]0;${debian_chroot:+($debian_chroot)}\w\a\]$PS1"
+                ;;
+            *)
+                ;;
+            esac
+            ```
     3. Save and exit.
     4. In the bash terminal, type the following commands:
         ```
@@ -116,22 +145,32 @@ This is an example of how to use:
     ```
     sudo apt update
     sudo apt upgrade
-    sudo apt autoremove
+    sudo apt autoremove --purge
     ```
 
-6. Add custom aliases to ~/.bash_aliases
+6. Add custom aliases to `~/.bash_aliases`
     ```
     alias cls="printf '\ec'; history -c"
-    alias nanos="nano -ET4"
+    alias nanos="nano -c -ET4"
     alias ii="explorer.exe"
     ```
 
 7. Install gcc-12 and g++-12.
     1. Restart WSL.
-    2. Run `sudo apt update` and `sudo apt upgrade`
-    3. Run `sudo apt install g++-12 gcc-12`
+    2. Run `sudo apt update && sudo apt upgrade`
+    3. Run `sudo apt install g++-12 gcc-12 build-essential`
 
-8. Add GitHub settings
+8. Install `cmake` from source.
+    1. Download `cmake-3.25.0.tar.gz` from this link: https://cmake.org/download/
+    2. Unzip it with the command `tar -xzf cmake-3.25.0.tar.gz`.
+    3. Run the following commands:
+        ```
+        sudo ./configure
+        sudo make
+        sudo make install
+        ```
+
+9. Add GitHub settings
     1. Restart WSL
     2. Run `mkdir repos`
     3. Connect to GitHub
