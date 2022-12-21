@@ -11,15 +11,14 @@ int main() {
 
     std::unique_ptr<Menu> menu(new Menu(choices));
     int choice = menu->HandleMenu();
+    std::unique_ptr<Fibonacci> fib = std::make_unique<Fibonacci>();
     switch (choice) {
-        case 0: {
-            std::unique_ptr<Fibonacci> fib(new Fibonacci());
+        case 0:
             std::cout << fib->FibAlgorithm(30000000) << std::endl;
-        } break;
-        case 1: {
-            std::unique_ptr<Fibonacci> fib(new Fibonacci());
+            break;
+        case 1:
             fib->FibBuiltIn(30000000);
-        } break;
+            break;
         default:
             std::cout << "Invalid selection!" << std::endl;
             break;
